@@ -1,5 +1,8 @@
 <h1>Vegetables</h1>
 
 <% @vegetables.each do |vegetable| %>
-  <p><%= vegetable.name %></p>
-<% end %> 
+  <h3><%= vegetable.name %></h3>
+  <p>Summer Harvest: <%= vegetable.summer_harvest %></p>
+  <p>Winter Harvest: <%= vegetable.winter_harvest %></p>
+  <p>Minimum of Sunlight: <%= vegetable.min_hrs_sun %></p>
+<% end %>
