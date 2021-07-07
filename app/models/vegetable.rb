@@ -1,3 +1,3 @@
-class Vegetable < ActiveRecord::Base
-  has_many :vegetable_gardens
+class Vegetable < ApplicationRecord
+  belongs_to :vegetable_garden
 end
