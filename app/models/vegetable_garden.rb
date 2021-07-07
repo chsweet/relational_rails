@@ -1,3 +1,4 @@
 class VegetableGarden < ApplicationRecord
-  belongs_to :vegestables
+  has_many :vegetables
 end
+ 
