@@ -13,12 +13,12 @@ RSpec.describe "movies index page", type: :feature do
 
     visit "/movies"
     save_and_open_page
-    
+
     expect(page).to have_content(movie_1.title)
     expect(page).to have_content(movie_2.title)
-    expect(page).to have_content(movie_1.oscar)
-    expect(page).to have_content(movie_2.oscar)
-    expect(page).to have_content(movie_1.nominations)
-    expect(page).to have_content(movie_2.nominations)
+    expect(page).to have_content("Has Oscar: #{movie_1.oscar}")
+    expect(page).to have_content("Has Oscar: #{movie_2.oscar}")
+    expect(page).to have_content("Nominations: #{movie_1.nominations}")
+    expect(page).to have_content("Nominations: #{movie_2.nominations}")
   end
 end

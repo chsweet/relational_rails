@@ -14,7 +14,7 @@ RSpec.describe "directors show page", type: :feature do
 
       expect(page).to have_content(director_1.name)
       expect(page).to have_content("Has Oscar: #{director_1.oscar}")
-      expect(page).to have_content("Nominations: #{director_1.nominations}")
+      expect(page).to have_content("Total Nominations: #{director_1.nominations}")
     end
   end
 end
