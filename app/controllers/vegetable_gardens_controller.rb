@@ -8,5 +8,7 @@ class VegetableGardensController < ApplicationController
   end
 
   def vegetables_index
-  end 
+    @vegetable_garden = VegetableGarden.find(params[:vegetable_garden_id])
+    @vegetables = @vegetable_garden.vegetables
+  end
 end

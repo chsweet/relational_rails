@@ -6,9 +6,9 @@ Rails.application.routes.draw do
 
   get '/vegetable_gardens/:id', to: 'vegetable_gardens#show'
 
+  get '/vegetable_gardens/:vegetable_garden_id/vegetables', to: 'vegetable_gardens#vegetables_index'
+
   get '/vegetables', to: 'vegetables#index'
 
   get '/vegetables/:id', to: 'vegetables#show'
-
-  get '/vegetable_gardens/:vegetable_garden_id/vegetables', to: 'vegetable_gardens#vegetables_index'
 end
