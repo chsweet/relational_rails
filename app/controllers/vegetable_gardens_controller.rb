@@ -8,7 +8,7 @@ class VegetableGardensController < ApplicationController
   end
 
   def vegetables_index
-    show
+    @vegetable_garden = VegetableGarden.find(params[:id])
     @vegetables = @vegetable_garden.vegetables
   end
 
@@ -19,6 +19,16 @@ class VegetableGardensController < ApplicationController
     vegetable_garden = VegetableGarden.create(garden_params)
     redirect_to '/vegetable_gardens'
   end
+
+  def edit
+    @vegetable_garden = VegetableGarden.find(params[:id])
+  end
+
+  def update
+    vegetable_garden = VegetableGarden.find(params[:id])
+    vegetable_garden.update(garden_params)
+    redirect_to "/vegetable_gardens/#{vegetable_garden.id}"
+  end 
 
 private
   def garden_params

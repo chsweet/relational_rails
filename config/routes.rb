@@ -13,4 +13,7 @@ Rails.application.routes.draw do
   get '/vegetables', to: 'vegetables#index'
 
   get '/vegetables/:id', to: 'vegetables#show'
+
+  get '/vegetable_gardens/:id/edit', to: 'vegetable_gardens#edit'
+  patch '/vegetable_gardens/:id', to: 'vegetable_gardens#update'
 end
