@@ -1,10 +1,6 @@
 require 'rails_helper'
 
 RSpec.describe "movies show page", type: :feature do
-  # As a visitor
-  # When I visit '/parents/:id'
-  # Then I see the parent with that id including the parent's attributes:
-  # - data from each column that is on the parent table
   describe 'they visit /movies/:id' do
     it 'displays movie id and attributes' do
       director = Director.create!(name: "Quentin Tarantino", oscar: true, nominations: 17)

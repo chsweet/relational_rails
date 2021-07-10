@@ -1,11 +1,10 @@
 class DirectorsController < ApplicationController
 
   def index
-    @directors = Director.all
+    @directors = Director.all.order(:created_at)
   end
 
   def show
     @director = Director.find(params[:id])
-    # binding.pry
   end
 end

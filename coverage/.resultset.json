@@ -246,107 +246,13 @@
           1,
           1,
           1,
+          1,
           null
         ]
       },
       "/Users/samanthapeterson/turing/2module/projects/relational_rails/app/helpers/application_helper.rb": {
         "lines": [
           1,
-          null
-        ]
-      },
-      "/Users/samanthapeterson/turing/2module/projects/relational_rails/spec/features/directors/show_spec.rb": {
-        "lines": [
-          1,
-          null,
-          1,
-          null,
-          null,
-          null,
-          null,
-          1,
-          1,
-          1,
-          null,
-          1,
-          1,
-          null,
-          1,
-          1,
-          1,
-          null,
-          null,
-          null
-        ]
-      },
-      "/Users/samanthapeterson/turing/2module/projects/relational_rails/spec/features/movies/index_spec.rb": {
-        "lines": [
-          1,
-          null,
-          1,
-          1,
-          1,
-          1,
-          null,
-          null,
-          null,
-          1,
-          null,
-          null,
-          null,
-          1,
-          1,
-          null,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          null,
-          null
-        ]
-      },
-      "/Users/samanthapeterson/turing/2module/projects/relational_rails/spec/features/movies/show_spec.rb": {
-        "lines": [
-          1,
-          null,
-          1,
-          null,
-          null,
-          null,
-          null,
-          1,
-          1,
-          1,
-          1,
-          null,
-          null,
-          null,
-          1,
-          1,
-          null,
-          1,
-          1,
-          1,
-          null,
-          null,
-          null
-        ]
-      },
-      "/Users/samanthapeterson/turing/2module/projects/relational_rails/spec/models/director_spec.rb": {
-        "lines": [
-          1,
-          null,
-          1,
-          1,
-          2,
-          2,
-          2,
-          2,
-          2,
-          2,
-          null,
           null
         ]
       },
@@ -364,40 +270,16 @@
           null
         ]
       },
-      "/Users/samanthapeterson/turing/2module/projects/relational_rails/spec/models/movie_spec.rb": {
-        "lines": [
-          1,
-          null,
-          1,
-          1,
-          2,
-          2,
-          2,
-          2,
-          2,
-          2,
-          null,
-          null
-        ]
-      },
-      "/Users/samanthapeterson/turing/2module/projects/relational_rails/app/models/movie.rb": {
-        "lines": [
-          1,
-          1,
-          null
-        ]
-      },
       "/Users/samanthapeterson/turing/2module/projects/relational_rails/app/controllers/directors_controller.rb": {
         "lines": [
           1,
           null,
           1,
-          1,
+          2,
           null,
           null,
           1,
-          1,
-          null,
+          0,
           null,
           null
         ]
@@ -407,21 +289,8 @@
           1,
           null
         ]
-      },
-      "/Users/samanthapeterson/turing/2module/projects/relational_rails/app/controllers/movies_controller.rb": {
-        "lines": [
-          1,
-          1,
-          1,
-          null,
-          null,
-          1,
-          1,
-          null,
-          null
-        ]
       }
     },
-    "timestamp": 1625778158
+    "timestamp": 1625871546
   }
 }

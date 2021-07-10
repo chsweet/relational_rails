@@ -4,4 +4,5 @@ Rails.application.routes.draw do
   get '/directors/:id', to: 'directors#show'
   get '/movies', to: 'movies#index'
   get '/movies/:id', to: 'movies#show'
+  get '/directors/:director_id/movies', to: 'director_movies#index'
 end
