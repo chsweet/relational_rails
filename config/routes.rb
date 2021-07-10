@@ -3,6 +3,8 @@ Rails.application.routes.draw do
   get '/', to: 'welcome#index'
 
   get '/vegetable_gardens', to: 'vegetable_gardens#index'
+  get '/vegetable_gardens/new', to: 'vegetable_gardens#new'
+  post '/vegetable_gardens', to: 'vegetable_gardens#create'
 
   get '/vegetable_gardens/:id', to: 'vegetable_gardens#show'
 

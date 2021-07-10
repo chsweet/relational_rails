@@ -45,5 +45,4 @@ RSpec.describe 'vegetable_gardens index page', type: :feature do
 
     expect(current_path).to eq("/vegetable_gardens")
   end
-
 end
