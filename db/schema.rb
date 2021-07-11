@@ -17,16 +17,16 @@ ActiveRecord::Schema.define(version: 2021_07_06_184732) do
 
   create_table "directors", force: :cascade do |t|
     t.string "name"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.boolean "oscar"
     t.integer "nominations"
   end
 
   create_table "movies", force: :cascade do |t|
     t.bigint "director_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.string "title"
     t.boolean "oscar"
     t.integer "nominations"
