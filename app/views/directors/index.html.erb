@@ -1,0 +1,5 @@
+<h1>Directors</h1>
+  <% @directors.each do |director| %>
+    <h3>Name: <%= director.name %></h3>
+    <p>Created at: <%= director.created_at %></p>
+<% end %>
