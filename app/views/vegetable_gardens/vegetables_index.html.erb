@@ -1,0 +1,9 @@
+<h1><%= @vegetable_garden.name %></h1>
+<% @vegetables.each do |vegetable| %>
+<h3>Vegetable: <%= vegetable.name %></h3>
+<p>Summer Harvest: <%= vegetable.summer_harvest %></p>
+<p>Winter Harvest: <%= vegetable.winter_harvest %></p>
+<p>Minimum of Sunlight: <%= vegetable.min_hrs_sun %></p>
+<% end %>
+
+<%= link_to "Add Vegetable", "/vegetable_gardens/#{@vegetable_garden.id}/vegetables/new" %>

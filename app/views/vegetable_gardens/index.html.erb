@@ -1,0 +1,7 @@
+<h1>Vegetable Gardens</h1>
+
+<% @vegetable_gardens.each do |garden| %>
+  <h3><%= garden.name %> planted on: <%= garden.created_at%></h3>
+<% end %>
+
+<%= link_to "New Garden", '/vegetable_gardens/new' %>
