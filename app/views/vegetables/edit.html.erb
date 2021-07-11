@@ -1,0 +1,11 @@
+<%= form_with url: "/vegetables/#{@vegetable.id}", method: :patch, local: true do |form| %>
+  <%= form.label :name %>
+  <%= form.text_field :name %>
+  <%= form.label :summer_harvest, "Summer Harvest" %>
+  <%= form.text_field :summer_harvest %>
+  <%= form.label :winter_harvest, "Winter Harvest" %>
+  <%= form.text_field :winter_harvest %>
+  <%= form.label :min_hrs_sun, "Minimum Hours of Sunlight" %>
+  <%= form.text_field :min_hrs_sun %>
+  <%= form.submit "Update Vegetable" %>
+<% end %>

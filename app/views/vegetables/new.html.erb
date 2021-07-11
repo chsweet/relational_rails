@@ -1,0 +1,11 @@
+<%= form_with url: "/vegetable_gardens/#{@vegetable_garden.id}/vegetables", method: :post, local: true do |form| %>
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+    <%= form.label :summer_harvest, "Summer Harvest" %>
+    <%= form.text_field :summer_harvest %>
+    <%= form.label :winter_harvest, "Winter Harvest" %>
+    <%= form.text_field :winter_harvest %>
+    <%= form.label :min_hrs_sun, "Minimum Hours of Sun" %>
+    <%= form.number_field :min_hrs_sun %>
+    <%= form.submit "Create New Vegetable" %>
+<% end %>
