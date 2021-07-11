@@ -21,17 +21,10 @@ RSpec.describe "directors show page", type: :feature do
       expect(page).to have_content("Total Nominations: #{@woody.nominations}")
     end
 
-      it 'displays the number of movies associated with that director' do
-        visit "/directors/#{@woody.id}"
+    it 'displays the number of movies associated with that director' do
+      visit "/directors/#{@woody.id}"
 
-        expect(page).to have_content("Total Movies: #{@woody.movie_count}")
-    end
-
-      it 'displays a link to the movies index page' do
-        visit "/directors/#{@woody.id}"
-        click_on('Movies')
-
-        expect(current_path).to eq('/movies')
+      expect(page).to have_content("Total Movies: #{@woody.movie_count}")
     end
 
     it 'displays a link to the movies index page' do
@@ -46,6 +39,14 @@ RSpec.describe "directors show page", type: :feature do
       click_on('Directors')
 
       expect(current_path).to eq('/directors')
+    end
+
+    it 'displays a link to the movies index page specific to that director' do
+      visit "directors/#{@woody.id}"
+      save_and_open_page
+      click_on('Movie Index')
+      save_and_open_page
+      expect(current_path).to eq("/directors/#{@woody.id}/movies")
     end
   end
 end
