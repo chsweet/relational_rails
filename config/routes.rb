@@ -16,4 +16,6 @@ Rails.application.routes.draw do
 
   get '/vegetable_gardens/:id/edit', to: 'vegetable_gardens#edit'
   patch '/vegetable_gardens/:id', to: 'vegetable_gardens#update'
+
+  get '/vegetable_gardens/:id/vegetables/new', to: 'vegetable_gardens#new_vegetable'
 end

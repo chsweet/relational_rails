@@ -5,3 +5,5 @@
 <p>Winter Harvest: <%= vegetable.winter_harvest %></p>
 <p>Minimum of Sunlight: <%= vegetable.min_hrs_sun %></p>
 <% end %>
+
+<%= link_to "Add Vegetable", "/vegetable_gardens/#{@vegetable_garden.id}/vegetables/new" %>
