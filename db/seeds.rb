@@ -5,11 +5,3 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-woody = Director.create!(name: "Woody Allen")
-manhattan = woody.movies.create!(title: "Manhattan",
-                                 oscar: false,
-                                 nominations: 2)
-
-annie = woody.movies.create!(title: "Annie Hall",
-                             oscar: true,
-                             nominations: 3)
