@@ -1,3 +1,3 @@
 class Vegetable < ApplicationRecord
-  belongs_to :vegetable_garden
+  belongs_to :garden
 end

@@ -15,7 +15,6 @@ RSpec.describe 'vegetables show page', type: :feature do
     expect(page).to have_content("Summer Harvest: #{@onion_1.summer_harvest}")
     expect(page).to have_content("Winter Harvest: #{@onion_1.winter_harvest}")
     expect(page).to have_content("Minimum of Sunlight: #{@onion_1.min_hrs_sun}")
-
   end
 
   it 'links to main vegetable index' do
