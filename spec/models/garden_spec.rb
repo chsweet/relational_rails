@@ -1,7 +1,9 @@
 require 'rails_helper'
 
 describe Garden do
-  it {should have_many(:vegetables)}
+  describe 'validations' do
+    it {should have_many(:vegetables)}
+  end 
 
   describe 'instance method' do
     describe '#vegetable_count' do
