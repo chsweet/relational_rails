@@ -42,4 +42,12 @@ RSpec.describe 'vegetables index page', type: :feature do
 
     expect(current_path).to eq("/vegetable_gardens")
   end
+
+  it 'links to edit vegetable page' do
+    visit "/vegetables"
+
+    click_on("Edit #{@onion_1.name}")
+
+    expect(current_path).to eq("/vegetables/#{@onion_1.id}/edit")
+  end
 end
