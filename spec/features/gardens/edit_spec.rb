@@ -12,29 +12,27 @@ require 'rails_helper'
 
 RSpec.describe 'the garden edit' do
   before :each do
-    @garden_1 = VegetableGarden.create!(name: 'Sweet Garden', summer_garden: true, winter_garden: true, hrs_of_sun: 15)
+    @garden_3 = Garden.create!(name: 'Maupin Garden', weeded: false, hrs_of_sun: 6)
   end
   it 'links to the edit page' do
-    visit "/vegetable_gardens/#{@garden_1.id}"
+    visit "/gardens/#{@garden_3.id}"
 
-    click_button("Edit #{@garden_1.name}")
+    click_button("Edit #{@garden_3.name}")
 
-    expect(current_path).to eq("/vegetable_gardens/#{@garden_1.id}/edit")
+    expect(current_path).to eq("/gardens/#{@garden_3.id}/edit")
   end
 
   it 'can edit the garden' do
-    @garden_1 = VegetableGarden.create!(name: 'Sweet Garden', summer_garden: true, winter_garden: true, hrs_of_sun: 15)
+    visit "/gardens/#{@garden_3.id}"
 
-    visit "/vegetable_gardens/#{@garden_1.id}"
+    expect(page).to have_content("Weeded: false")
 
-    expect(page).to have_content("Winter Garden: true")
+    click_button("Edit #{@garden_3.name}")
 
-    click_button("Edit #{@garden_1.name}")
-
-    fill_in 'Winter Garden', with: 'false'
+    fill_in 'Weeded', with: 'true'
     click_button 'Update Garden'
 
-    expect(current_path).to eq("/vegetable_gardens/#{@garden_1.id}")
-    expect(page).to have_content("Winter Garden: false")
+    expect(current_path).to eq("/gardens/#{@garden_3.id}")
+    expect(page).to have_content("Weeded: true")
   end
 end

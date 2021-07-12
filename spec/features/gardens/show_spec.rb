@@ -14,24 +14,23 @@ RSpec.describe 'vegetable garden show page', type: :feature do
   # Then I see the parent with that id including the parent's attributes:
   # - data from each column that is on the parent table
   it 'can see the name and attributes of specific vegetable garden id' do
-    visit "/vegetable_gardens/#{@garden_1.id}"
+    visit "/gardens/#{@garden_1.id}"
 
     expect(page).to have_content(@garden_1.name)
-    expect(page).to have_content("Summer Garden: #{@garden_1.summer_garden}")
-    expect(page).to have_content("Winter Garden: #{@garden_1.winter_garden}")
+    expect(page).to have_content("Weeded: #{@garden_1.weeded}")
     expect(page).to have_content("Hours of Sunlight: #{@garden_1.hrs_of_sun}")
   end
   # As a visitor
   # When I visit a parent's show page
   # I see a count of the number of children associated with this parent
   it 'shows vegetable count' do
-    visit "/vegetable_gardens/#{@garden_1.id}"
+    visit "/gardens/#{@garden_1.id}"
 
     expect(page).to have_content("Number of Vegetabels: #{@garden_1.vegetable_count}")
   end
 
   it 'links to main vegetable index' do
-    visit "/vegetable_gardens/#{@garden_1.id}"
+    visit "/gardens/#{@garden_1.id}"
 
     click_on("Vegetables Index")
 
@@ -39,18 +38,18 @@ RSpec.describe 'vegetable garden show page', type: :feature do
   end
 
   it 'links to main vegetable index' do
-    visit "/vegetable_gardens/#{@garden_1.id}"
+    visit "/gardens/#{@garden_1.id}"
 
     click_on("Gardens Index")
 
-    expect(current_path).to eq("/vegetable_gardens")
+    expect(current_path).to eq("/gardens")
   end
 
   it 'links to main vegetable index' do
-    visit "/vegetable_gardens/#{@garden_1.id}"
+    visit "/gardens/#{@garden_1.id}"
 
     click_on("Garden Vegetables Index")
 
-    expect(current_path).to eq("/vegetable_gardens/#{@garden_1.id}/vegetables")
+    expect(current_path).to eq("/gardens/#{@garden_1.id}/vegetables")
   end
 end

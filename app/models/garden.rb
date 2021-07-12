@@ -5,5 +5,4 @@ class Garden < ApplicationRecord
   def vegetable_count
     vegetables.count
   end
-
 end

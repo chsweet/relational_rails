@@ -9,19 +9,21 @@ require 'rails_helper'
 
 RSpec.describe 'vegetable garden show page', type: :feature do
   before :each do
-    @garden_1 = VegetableGarden.create!(name: 'Sweet Garden', summer_garden: true, winter_garden: false, hrs_of_sun: 15)
+    @garden_1 = Garden.create!(name: 'Sweet Garden', weeded: true, hrs_of_sun: 15)
+    @garden_2 = Garden.create!(name: 'Shears Garden', weeded: true, hrs_of_sun: 10)
+    @garden_3 = Garden.create!(name: 'Maupin Garden', weeded: false, hrs_of_sun: 6)
 
-    @tomato_1 = @garden_1.vegetables.create!(name: 'Cherokee Purple', summer_harvest: true, winter_harvest: false, min_hrs_sun: 8)
-    @onion_1 = @garden_1.vegetables.create!(name: 'Sweet Yellow Onion', summer_harvest: true, winter_harvest: true, min_hrs_sun: 14)
+    @tomato_1 = @garden_1.vegetables.create!(name: 'Cherokee Purple', perennial: true, min_hrs_sun: 8)
+    @onion_1 = @garden_1.vegetables.create!(name: 'Sweet Yellow Onion', perennial: true, min_hrs_sun: 14)
   end
 
   it 'can delete garden and all vegetables' do
-    visit "/vegetable_gardens/#{@garden_1.id}"
+    visit "/gardens/#{@garden_1.id}"
 
     click_link "Delete Garden"
-    save_and_open_page
 
-    expect(current_path).to eq("/vegetable_gardens")
+    expect(current_path).to eq("/gardens")
     expect(page).to_not have_content("Sweet Garden")
+    expect(page).to have_content("Maupin Garden")
   end
 end

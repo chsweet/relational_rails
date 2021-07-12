@@ -26,7 +26,7 @@ class GardensController < ApplicationController
 
   def update
     garden = Garden.find(params[:id])
-    vgarden.update(garden_params)
+    garden.update(garden_params)
     redirect_to "/gardens/#{garden.id}"
   end
 
@@ -38,6 +38,6 @@ class GardensController < ApplicationController
 
 private
   def garden_params
-    params.permit(:name, :summer_garden, :winter_garden, :hrs_of_sun)
+    params.permit(:name, :weeded, :hrs_of_sun)
   end
 end

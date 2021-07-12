@@ -1,11 +1,9 @@
-<%= form_with url: "/vegetable_gardens/#{@vegetable_garden.id}", method: :patch, local: true do |form| %>
+<%= form_with url: "/gardens/#{@garden.id}", method: :patch, local: true do |form| %>
   <%= form.label :name %>
-  <%= form.text_field :name %>
-  <%= form.label :summer_garden, "Summer Garden" %>
-  <%= form.text_field :summer_garden %>
-  <%= form.label :winter_garden, "Winter Garden" %>
-  <%= form.text_field :winter_garden %>
+  <%= form.text_field :name, :value => @garden.name %>
+  <%= form.label :weeded, "Weeded" %>
+  <%= form.text_field :weeded, :value => @garden.weeded %>
   <%= form.label :hrs_of_sun, "Hours of Sun" %>
-  <%= form.text_field :hrs_of_sun %>
+  <%= form.number_field :hrs_of_sun, :value => @garden.hrs_of_sun %>
   <%= form.submit "Update Garden" %>
 <% end %>

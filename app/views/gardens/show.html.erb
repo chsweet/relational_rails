@@ -1,10 +1,9 @@
-<%= link_to 'Garden Vegetables Index', "/vegetable_gardens/#{@vegetable_garden.id}/vegetables", method: :get, local: true %>
+<%= link_to 'Garden Vegetables Index', "/gardens/#{@garden.id}/vegetables", method: :get, local: true %>
 
-<h1><%= @vegetable_garden.name %></h1>
-<p>Summer Garden: <%= @vegetable_garden.summer_garden %></p>
-<p>Winter Garden: <%= @vegetable_garden.winter_garden %></p>
-<p>Hours of Sunlight: <%= @vegetable_garden.hrs_of_sun %></p>
-<p>Number of Vegetabels: <%= @vegetable_garden.vegetable_count %></p>
+<h1><%= @garden.name %></h1>
+<p>Weeded: <%= @garden.weeded %></p>
+<p>Hours of Sunlight: <%= @garden.hrs_of_sun %></p>
+<p>Number of Vegetabels: <%= @garden.vegetable_count %></p>
 
-<%= button_to "Edit #{@vegetable_garden.name}", "/vegetable_gardens/#{@vegetable_garden.id}/edit", method: :get %>
-<%= link_to "Delete Garden", "/vegetable_gardens/#{@vegetable_garden.id}", method: :delete %>
+<%= button_to "Edit #{@garden.name}", "/gardens/#{@garden.id}/edit", method: :get %>
+<%= link_to "Delete Garden", "/gardens/#{@garden.id}", method: :delete %>
