@@ -7,4 +7,14 @@ class DirectorsController < ApplicationController
   def show
     @director = Director.find(params[:id])
   end
+
+  def create
+    Director.create(name: params[:name])
+    redirect_to '/directors'
+  end
+
+  private
+  def director_params
+    params.permit(:name)
+  end
 end
