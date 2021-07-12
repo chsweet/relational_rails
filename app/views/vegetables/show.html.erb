@@ -1,6 +1,5 @@
 <h1><%= @vegetable.name %></h1>
-<p>Summer Harvest: <%= @vegetable.summer_harvest %></p>
-<p>Winter Harvest: <%= @vegetable.winter_harvest %></p>
+<p>Perennial: <%= @vegetable.perennial %></p>
 <p>Minimum of Sunlight: <%= @vegetable.min_hrs_sun %></p>
 
 <%= button_to "Edit #{@vegetable.name}", "/vegetables/#{@vegetable.id}/edit", method: :get %>

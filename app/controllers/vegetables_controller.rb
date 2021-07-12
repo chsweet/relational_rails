@@ -8,13 +8,13 @@ class VegetablesController < ApplicationController
   end
 
   def new
-    @vegetable_garden = VegetableGarden.find(params[:id])
+    @garden = Garden.find(params[:id])
   end
 
   def create
-    vegetable_garden = VegetableGarden.find(params[:id])
-    vegetable = vegetable_garden.vegetables.create(vegetable_params)
-    redirect_to "/vegetable_gardens/#{vegetable_garden.id}/vegetables"
+    garden = Garden.find(params[:id])
+    vegetable = garden.vegetables.create(vegetable_params)
+    redirect_to "/gardens/#{garden.id}/vegetables"
   end
 
   def edit
@@ -35,6 +35,6 @@ class VegetablesController < ApplicationController
 
 private
   def vegetable_params
-    params.permit(:name, :summer_harvest, :winter_harvest, :min_hrs_sun)
+    params.permit(:name, :perennial, :min_hrs_sun)
   end
 end

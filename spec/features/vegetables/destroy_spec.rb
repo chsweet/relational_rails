@@ -10,10 +10,10 @@ require 'rails_helper'
 
 RSpec.describe 'destroy vegetable', type: :feature do
   before :each do
-    @garden = VegetableGarden.create!(name: 'Sweet Garden', summer_garden: true, winter_garden: false, hrs_of_sun: 10)
-    @onion_1 = @garden.vegetables.create!(name: 'Sweet Yellow Onion', summer_harvest: true, winter_harvest: true, min_hrs_sun: 14)
-    @tomato_1 = @garden.vegetables.create!(name: 'Cherokee Purple', summer_harvest: true, winter_harvest: false, min_hrs_sun: 8)
-    @potato_1 = @garden.vegetables.create!(name: 'Yukon Gold', summer_harvest: false, winter_harvest: true, min_hrs_sun: 6)
+    @garden = Garden.create!(name: 'Sweet Garden', weeded: true, hrs_of_sun: 10)
+    @tomato_1 = @garden.vegetables.create!(name: 'Cherokee Purple', perennial: true, min_hrs_sun: 8)
+    @onion_1 = @garden.vegetables.create!(name: 'Sweet Yellow Onion', perennial: true, min_hrs_sun: 14)
+    @potato_1 = @garden.vegetables.create!(name: 'Yukon Gold', perennial: false, min_hrs_sun: 6)
   end
 
   it 'can delete vegetable from index page' do
