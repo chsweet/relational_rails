@@ -1,0 +1,10 @@
+<h5><a href="/gardens">Gardens Index</a></h5>
+<h5><a href="/vegetables">Vegetables Index</a></h5>
+
+<h1>Gardens</h1>
+
+<% @gardens.each do |garden| %>
+  <h3><%= garden.name %> planted on: <%= garden.created_at%></h3> <%= link_to "Edit #{garden.name}", "/gardens/#{garden.id}/edit" %>
+<% end %>
+
+<%= link_to "New Garden", '/gardens/new' %>
