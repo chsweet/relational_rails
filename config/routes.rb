@@ -3,26 +3,26 @@ Rails.application.routes.draw do
 
   get '/', to: 'welcome#index'
 
-  get '/vegetable_gardens', to: 'vegetable_gardens#index'
-  get '/vegetable_gardens/:id', to: 'vegetable_gardens#show'
-  get '/vegetable_gardens/:id/vegetables', to: 'vegetable_gardens#vegetables_index'
+  get '/gardens', to: 'gardens#index'
+  get '/gardens/:id', to: 'gardens#show'
+  get '/gardens/:id/vegetables', to: 'gardens#vegetables_index'
+
+  get '/gardens/new', to: 'gardens#new'
+  post '/gardens', to: 'gardens#create'
+
+  get '/gardens/:id/edit', to: 'gardens#edit'
+  patch '/gardens/:id', to: 'gardens#update'
+
+  delete '/gardens/:id', to: 'gardens#destroy'
 
   get '/vegetables', to: 'vegetables#index'
   get '/vegetables/:id', to: 'vegetables#show'
 
-  get '/vegetable_gardens/new', to: 'vegetable_gardens#new'
-  post '/vegetable_gardens', to: 'vegetable_gardens#create'
-
-  get '/vegetable_gardens/:id/edit', to: 'vegetable_gardens#edit'
-  patch '/vegetable_gardens/:id', to: 'vegetable_gardens#update'
-
-  get '/vegetable_gardens/:id/vegetables/new', to: 'vegetables#new'
-  post '/vegetable_gardens/:id/vegetables', to: 'vegetables#create'
+  get '/gardens/:id/vegetables/new', to: 'vegetables#new'
+  post '/gardens/:id/vegetables', to: 'vegetables#create'
 
   get '/vegetables/:id/edit', to: 'vegetables#edit'
   patch '/vegetables/:id', to: 'vegetables#update'
-
-  delete '/vegetable_gardens/:id', to: 'vegetable_gardens#destroy'
 
   delete '/vegetables/:id', to: 'vegetables#destroy'
 
