@@ -25,7 +25,7 @@ RSpec.describe 'vegetable garden vegetables index' do
   it 'links to main vegetable index' do
     visit "/gardens/#{@garden_1.id}/vegetables"
 
-    click_on("Vegetables Index")
+    click_on("Vegetables")
 
     expect(current_path).to eq("/vegetables")
   end
@@ -33,7 +33,7 @@ RSpec.describe 'vegetable garden vegetables index' do
   it 'links to main vegetable index' do
     visit "/gardens/#{@garden_1.id}/vegetables"
 
-    click_on("Gardens Index")
+    click_on("Gardens")
 
     expect(current_path).to eq("/gardens")
   end

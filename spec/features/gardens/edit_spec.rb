@@ -29,7 +29,7 @@ RSpec.describe 'the garden edit' do
 
     click_button("Edit #{@garden_3.name}")
 
-    fill_in 'Weeded', with: 'true'
+    page.check('Weeded')
     click_button 'Update Garden'
 
     expect(current_path).to eq("/gardens/#{@garden_3.id}")

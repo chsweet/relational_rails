@@ -13,9 +13,9 @@ require 'rails_helper'
 RSpec.describe 'new garden creation' do
   it 'links to the new page from the artist index' do
     visit '/gardens'
-    
+
     click_link("New Garden")
-    save_and_open_page
+
     expect(current_path).to eq('/gardens/new')
   end
 
@@ -23,7 +23,7 @@ RSpec.describe 'new garden creation' do
     visit '/gardens/new'
 
     fill_in('Name', with: '39th Street Garden')
-    fill_in('Weeded', with: 'true')
+    page.check('Weeded')
     fill_in('Hours of Sun', with: '12')
     click_button('Create Garden')
 

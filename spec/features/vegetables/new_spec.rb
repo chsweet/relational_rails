@@ -30,7 +30,7 @@ RSpec.describe 'new vegetable creation' do
     visit "/gardens/#{@garden_1.id}/vegetables/new"
 
     fill_in('Name', with: 'Onion')
-    fill_in('Perennial', with: 'false')
+    page.uncheck('Perennial')
     fill_in('Minimum Hours of Sun', with: 8)
     click_button('Create New Vegetable')
 

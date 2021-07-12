@@ -26,13 +26,13 @@ RSpec.describe 'vegetable garden show page', type: :feature do
   it 'shows vegetable count' do
     visit "/gardens/#{@garden_1.id}"
 
-    expect(page).to have_content("Number of Vegetabels: #{@garden_1.vegetable_count}")
+    expect(page).to have_content("Number of Vegetables: #{@garden_1.vegetable_count}")
   end
 
   it 'links to main vegetable index' do
     visit "/gardens/#{@garden_1.id}"
 
-    click_on("Vegetables Index")
+    click_on("Vegetables")
 
     expect(current_path).to eq("/vegetables")
   end
@@ -40,7 +40,7 @@ RSpec.describe 'vegetable garden show page', type: :feature do
   it 'links to main vegetable index' do
     visit "/gardens/#{@garden_1.id}"
 
-    click_on("Gardens Index")
+    click_on("Gardens")
 
     expect(current_path).to eq("/gardens")
   end
