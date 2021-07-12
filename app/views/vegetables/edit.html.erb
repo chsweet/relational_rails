@@ -3,7 +3,7 @@
   <%= form.text_field :name, :value => @vegetable.name %>
   <br>
   <%= form.label :perennial, "Perennial:" %>
-  <%= form.text_field :perennial, :value => @vegetable.perennial %>
+  <%= form.check_box :perennial, :value => @vegetable.perennial %>
   <br>
   <%= form.label :min_hrs_sun, "Minimum Hours of Sunlight:" %>
   <%= form.text_field :min_hrs_sun, :value => @vegetable.min_hrs_sun%>
