@@ -27,6 +27,12 @@ class VegetablesController < ApplicationController
     redirect_to "/vegetables/#{vegetable.id}"
   end
 
+  def destroy
+    vegetable = Vegetable.find(params[:id])
+    vegetable.destroy
+    redirect_to '/vegetables'
+  end
+
 private
   def vegetable_params
     params.permit(:name, :summer_harvest, :winter_harvest, :min_hrs_sun)

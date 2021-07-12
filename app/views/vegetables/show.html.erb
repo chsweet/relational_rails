@@ -4,3 +4,4 @@
 <p>Minimum of Sunlight: <%= @vegetable.min_hrs_sun %></p>
 
 <%= button_to "Edit #{@vegetable.name}", "/vegetables/#{@vegetable.id}/edit", method: :get %>
+<%= link_to 'Delete Vegetable', "/vegetables/#{@vegetable.id}", method: :delete %>
