@@ -5,4 +5,5 @@
   <p>Summer Harvest: <%= vegetable.summer_harvest %></p>
   <p>Winter Harvest: <%= vegetable.winter_harvest %></p>
   <p>Minimum of Sunlight: <%= vegetable.min_hrs_sun %></p>
+  <%= link_to "Edit #{vegetable.name}", "/vegetables/#{vegetable.id}/edit" %>
 <% end %>
