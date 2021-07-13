@@ -5,11 +5,12 @@ RSpec.describe 'vegetable garden vegetables index' do
     @garden_1 = Garden.create!(name: 'Sweet Garden', weeded: true, hrs_of_sun: 15)
 
     @tomato_1 = @garden_1.vegetables.create!(name: 'Cherokee Purple', perennial: true, min_hrs_sun: 8)
+    @potato_1 = @garden_1.vegetables.create!(name: 'Yukon Gold Potato', perennial: false, min_hrs_sun: 10)
     @onion_1 = @garden_1.vegetables.create!(name: 'Sweet Yellow Onion', perennial: true, min_hrs_sun: 14)
   end
   # As a visitor
   # When I visit '/parents/:parent_id/child_table_name'
-  # Then I see each Child that is associated with that Parent with each Child's attributes:
+  # Then I see each Child that is associated with that Parent with each Child's attributes: User story 3 & 15
   it 'can see the name and attributes of all vegetables for a specific garden' do
     visit "/gardens/#{@garden_1.id}/vegetables"
 
@@ -44,5 +45,15 @@ RSpec.describe 'vegetable garden vegetables index' do
     click_on("Edit #{@onion_1.name}")
 
     expect(current_path).to eq("/vegetables/#{@onion_1.id}/edit")
+  end
+
+  it 'has link to sort vegetables alphabeticaly' do
+    visit "/gardens/#{@garden_1.id}/vegetables"
+
+    click_on("Sort Vegetables")
+
+    expect(current_path).to eq("/gardens/#{@garden_1.id}/vegetables")
+    expect(@tomato_1.name).to appear_before(@potato_1.name, only_text: true)
+    expect(@potato_1.name).to_not appear_before(@onion_1.name, only_text: true)
   end
 end
