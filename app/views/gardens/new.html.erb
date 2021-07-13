@@ -1,0 +1,10 @@
+<%= form_with url: '/gardens', method: :post, local: true do |form| %>
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+    <%= form.label :weeded, "Weeded" %>
+    <%= form.check_box :weeded %>
+    <%= form.label :hrs_of_sun, "Hours of Sun" %>
+    <%= form.number_field :hrs_of_sun %>
+
+    <%= form.submit "Create Garden" %>
+<% end %>

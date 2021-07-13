@@ -23,6 +23,14 @@ ActiveRecord::Schema.define(version: 2021_07_06_184732) do
     t.integer "nominations"
   end
 
+  create_table "gardens", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "name"
+    t.boolean "weeded"
+    t.integer "hrs_of_sun"
+  end
+
   create_table "movies", force: :cascade do |t|
     t.bigint "director_id"
     t.datetime "created_at", null: false
@@ -33,26 +41,16 @@ ActiveRecord::Schema.define(version: 2021_07_06_184732) do
     t.index ["director_id"], name: "index_movies_on_director_id"
   end
 
-  create_table "vegetable_gardens", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.string "name"
-    t.boolean "summer_garden"
-    t.boolean "winter_garden"
-    t.integer "hrs_of_sun"
-  end
-
   create_table "vegetables", force: :cascade do |t|
-    t.bigint "vegetable_garden_id"
+    t.bigint "garden_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "name"
-    t.boolean "summer_harvest"
-    t.boolean "winter_harvest"
+    t.boolean "perennial"
     t.integer "min_hrs_sun"
-    t.index ["vegetable_garden_id"], name: "index_vegetables_on_vegetable_garden_id"
+    t.index ["garden_id"], name: "index_vegetables_on_garden_id"
   end
 
   add_foreign_key "movies", "directors"
-  add_foreign_key "vegetables", "vegetable_gardens"
+  add_foreign_key "vegetables", "gardens"
 end

@@ -1,0 +1,9 @@
+<%= form_with url: "/gardens/#{@garden.id}", method: :patch, local: true do |form| %>
+  <%= form.label :name %>
+  <%= form.text_field :name, :value => @garden.name %>
+  <%= form.label :weeded, "Weeded" %>
+  <%= form.check_box :weeded, :value => @garden.weeded %>
+  <%= form.label :hrs_of_sun, "Hours of Sun" %>
+  <%= form.number_field :hrs_of_sun, :value => @garden.hrs_of_sun %>
+  <%= form.submit "Update Garden" %>
+<% end %>

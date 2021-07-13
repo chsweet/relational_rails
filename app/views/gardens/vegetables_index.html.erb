@@ -1,0 +1,10 @@
+<h1><%= @garden.name %></h1>
+<% @vegetables.each do |vegetable| %>
+<h3>Vegetable: <%= vegetable.name %></h3>
+<p>Perennial: <%= vegetable.perennial %></p>
+<p>Minimum of Sunlight: <%= vegetable.min_hrs_sun %></p>
+<%= link_to "Edit #{vegetable.name}", "/vegetables/#{vegetable.id}/edit" %>
+<% end %>
+<br>
+<%= link_to "Add Vegetable", "/gardens/#{@garden.id}/vegetables/new" %>
+<br>

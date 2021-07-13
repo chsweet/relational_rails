@@ -1,3 +1,7 @@
 class Vegetable < ApplicationRecord
-  belongs_to :vegetable_garden
+  belongs_to :garden
+
+  def self.perennial_vegetable
+    self.where(perennial: true)
+  end
 end
