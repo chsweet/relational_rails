@@ -3,3 +3,5 @@
 <p>Has Oscar: <%= @director.oscar %></p>
 <p>Total Nominations: <%= @director.nominations %></p>
 <p>Total Movies: <%= @director.movie_count %></p>
+
+<%= link_to "Edit #{@director.name}", "/directors/#{@director.id}/edit" %>

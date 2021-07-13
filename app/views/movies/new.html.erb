@@ -1,0 +1,9 @@
+<%= form_with url: "/directors/#{@director.id}/movies", method: :post, local: true do |form| %>
+  <%= form.label :title %>
+  <%= form.text_field :title %>
+  <%= form.label :oscar %>
+  <%= form.check_box :oscar %>
+  <%= form.label :nominations %>
+  <%= form.number_field :nominations %>
+  <%= form.submit 'Create Movie' %>
+<% end %>
