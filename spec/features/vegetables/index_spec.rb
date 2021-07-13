@@ -10,18 +10,18 @@ RSpec.describe 'vegetables index page', type: :feature do
   # As a visitor
   # When I visit '/child_table_name'
   # Then I see each Child in the system including the Child's attributes:
-  it 'can see the name and attributes of all vegetables' do
+  it 'can see the name and attributes of all vegetables that are perennials' do
     visit "/vegetables"
-    # save_and_open_page
+    save_and_open_page
     expect(page).to have_content(@tomato_1.name)
     expect(page).to have_content("Perennial: #{@tomato_1.perennial}")
     expect(page).to have_content("Minimum of Sunlight: #{@tomato_1.min_hrs_sun}")
     expect(page).to have_content(@onion_1.name)
     expect(page).to have_content("Perennial: #{@onion_1.perennial}")
     expect(page).to have_content("Minimum of Sunlight: #{@onion_1.min_hrs_sun}")
-    expect(page).to have_content(@potato_1.name)
-    expect(page).to have_content("Perennial: #{@potato_1.perennial}")
-    expect(page).to have_content("Minimum of Sunlight: #{@potato_1.min_hrs_sun}")
+    expect(page).to_not have_content(@potato_1.name)
+    expect(page).to_not have_content("Perennial: #{@potato_1.perennial}")
+    expect(page).to_not have_content("Minimum of Sunlight: #{@potato_1.min_hrs_sun}")
   end
 
   it 'links to main vegetable index' do

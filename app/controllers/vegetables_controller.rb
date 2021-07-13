@@ -1,6 +1,6 @@
 class VegetablesController < ApplicationController
   def index
-    @vegetables = Vegetable.all
+    @vegetables = Vegetable.perennial_vegetable
   end
 
   def show
