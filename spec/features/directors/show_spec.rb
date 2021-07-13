@@ -43,10 +43,28 @@ RSpec.describe "directors show page", type: :feature do
 
     it 'displays a link to the movies index page specific to that director' do
       visit "directors/#{@woody.id}"
-      save_and_open_page
+
       click_on('Movie Index')
-      save_and_open_page
+
       expect(current_path).to eq("/directors/#{@woody.id}/movies")
+    end
+
+    it 'displays a link to update that director' do
+      director = Director.create!(name: 'David Lunch')
+
+      visit "/directors/#{director.id}"
+
+      expect(page).to have_content('David Lunch')
+
+      click_link 'Edit David Lunch'
+
+      fill_in 'Name', with: 'David Lynch'
+      click_button 'Update Director'
+      
+      save_and_open_page
+
+      expect(current_path).to eq("/directors/#{director.id}")
+      expect(page).to have_content('David Lynch')
     end
   end
 end

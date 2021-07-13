@@ -14,7 +14,7 @@
       <img src="./assets/0.12.3/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" class="hide">
-      <div class="timestamp">Generated <abbr class="timeago" title="2021-07-12T17:06:17-05:00">2021-07-12T17:06:17-05:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2021-07-13T09:38:26-05:00">2021-07-13T09:38:26-05:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -23,14 +23,14 @@
     <span class="group_name">All Files</span>
     (<span class="covered_percent">
       <span class="green">
-  96.15%
+  96.7%
 </span>
 
      </span>
      covered at
      <span class="covered_strength">
-       <span class="red">
-         0.99
+       <span class="yellow">
+         1.0
        </span>
     </span> hits/line
     )
@@ -39,15 +39,15 @@
   <a name="AllFiles"></a>
 
   <div>
-    <b>19</b> files in total.
+    <b>21</b> files in total.
   </div>
 
   <div class="t-line-summary">
-    <b>78</b> relevant lines,
-    <span class="green"><b>75</b> lines covered</span> and
+    <b>91</b> relevant lines,
+    <span class="green"><b>88</b> lines covered</span> and
     <span class="red"><b>3</b> lines missed. </span>
     (<span class="green">
-  96.15%
+  96.7%
 </span>
 )
   </div>
@@ -82,13 +82,24 @@
           </tr>
         
           <tr class="t-file">
-            <td class="strong t-file__name"><a href="#537a5389066cf3a2e00a852a45f339ee08218e44" class="src_link" title="app/controllers/directors_controller.rb">app/controllers/directors_controller.rb</a></td>
-            <td class="yellow strong cell--number t-file__coverage">81.82 %</td>
-            <td class="cell--number">20</td>
-            <td class="cell--number">11</td>
-            <td class="cell--number">9</td>
+            <td class="strong t-file__name"><a href="#2d130fde4ad40c9e52f5d92041489e951cd54037" class="src_link" title="app/controllers/director_movies_controller.rb">app/controllers/director_movies_controller.rb</a></td>
+            <td class="green strong cell--number t-file__coverage">100.00 %</td>
+            <td class="cell--number">6</td>
+            <td class="cell--number">4</td>
+            <td class="cell--number">4</td>
+            <td class="cell--number">0</td>
+            <td class="cell--number">1.50</td>
+            
+          </tr>
+        
+          <tr class="t-file">
+            <td class="strong t-file__name"><a href="#82805b54746d3da11aedc347d414d3f5cefa764b" class="src_link" title="app/controllers/movies_controller.rb">app/controllers/movies_controller.rb</a></td>
+            <td class="yellow strong cell--number t-file__coverage">85.71 %</td>
+            <td class="cell--number">24</td>
+            <td class="cell--number">14</td>
+            <td class="cell--number">12</td>
             <td class="cell--number">2</td>
-            <td class="cell--number">0.91</td>
+            <td class="cell--number">0.86</td>
             
           </tr>
         
@@ -122,6 +133,17 @@
             <td class="cell--number">3</td>
             <td class="cell--number">1</td>
             <td class="cell--number">0.75</td>
+            
+          </tr>
+        
+          <tr class="t-file">
+            <td class="strong t-file__name"><a href="#fa11121ba40751fa1a5e636647aa6a7b3fc275d3" class="src_link" title="app/models/movie.rb">app/models/movie.rb</a></td>
+            <td class="green strong cell--number t-file__coverage">100.00 %</td>
+            <td class="cell--number">3</td>
+            <td class="cell--number">2</td>
+            <td class="cell--number">2</td>
+            <td class="cell--number">0</td>
+            <td class="cell--number">1.00</td>
             
           </tr>
         
@@ -271,9 +293,9 @@
           <tr class="t-file">
             <td class="strong t-file__name"><a href="#161cb47417944d7d2125e988b5f7081cf870dd26" class="src_link" title="config/routes.rb">config/routes.rb</a></td>
             <td class="green strong cell--number t-file__coverage">100.00 %</td>
-            <td class="cell--number">21</td>
-            <td class="cell--number">19</td>
-            <td class="cell--number">19</td>
+            <td class="cell--number">26</td>
+            <td class="cell--number">23</td>
+            <td class="cell--number">23</td>
             <td class="cell--number">0</td>
             <td class="cell--number">1.00</td>
             
@@ -349,12 +371,12 @@
 </div>
 
       
-        <div class="source_table" id="537a5389066cf3a2e00a852a45f339ee08218e44">
+        <div class="source_table" id="2d130fde4ad40c9e52f5d92041489e951cd54037">
   <div class="header">
-    <h3>app/controllers/directors_controller.rb</h3>
+    <h3>app/controllers/director_movies_controller.rb</h3>
     <h4>
-      <span class="yellow">
-  81.82%
+      <span class="green">
+  100.0%
 </span>
 
       lines covered
@@ -363,9 +385,9 @@
     
 
     <div class="t-line-summary">
-      <b>11</b> relevant lines.
-      <span class="green"><b>9</b> lines covered</span> and
-      <span class="red"><b>2</b> lines missed.</span>
+      <b>4</b> relevant lines.
+      <span class="green"><b>4</b> lines covered</span> and
+      <span class="red"><b>0</b> lines missed.</span>
     </div>
 
     
@@ -382,23 +404,12 @@
 
             
 
-            <code class="ruby">class DirectorsController &lt; ApplicationController</code>
+            <code class="ruby">class DirectorMoviesController &lt; ApplicationController</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="2">
-            
-            
-
-            
-
-            <code class="ruby"></code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="3">
+          <li class="covered" data-hits="1" data-linenumber="2">
             <span class="hits">1</span>
             
 
@@ -409,13 +420,24 @@
         </div>
       
         <div>
+          <li class="covered" data-hits="2" data-linenumber="3">
+            <span class="hits">2</span>
+            
+
+            
+
+            <code class="ruby">    @director = Director.find(params[:director_id])</code>
+          </li>
+        </div>
+      
+        <div>
           <li class="covered" data-hits="2" data-linenumber="4">
             <span class="hits">2</span>
             
 
             
 
-            <code class="ruby">    @directors = Director.all.order(:created_at)</code>
+            <code class="ruby">    @movies = @director.movies</code>
           </li>
         </div>
       
@@ -437,12 +459,98 @@
 
             
 
+            <code class="ruby">end</code>
+          </li>
+        </div>
+      
+    </ol>
+  </pre>
+</div>
+
+      
+        <div class="source_table" id="82805b54746d3da11aedc347d414d3f5cefa764b">
+  <div class="header">
+    <h3>app/controllers/movies_controller.rb</h3>
+    <h4>
+      <span class="yellow">
+  85.71%
+</span>
+
+      lines covered
+    </h4>
+
+    
+
+    <div class="t-line-summary">
+      <b>14</b> relevant lines.
+      <span class="green"><b>12</b> lines covered</span> and
+      <span class="red"><b>2</b> lines missed.</span>
+    </div>
+
+    
+
+  </div>
+
+  <pre>
+    <ol>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="1">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">class MoviesController &lt; ApplicationController</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="2">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">  def index</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="missed" data-hits="0" data-linenumber="3">
+            
+            
+
+            
+
+            <code class="ruby">    @movies = Movie.all</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="4">
+            
+            
+
+            
+
+            <code class="ruby">  end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="5">
+            
+            
+
+            
+
             <code class="ruby"></code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="7">
+          <li class="covered" data-hits="1" data-linenumber="6">
             <span class="hits">1</span>
             
 
@@ -453,13 +561,24 @@
         </div>
       
         <div>
-          <li class="missed" data-hits="0" data-linenumber="8">
+          <li class="missed" data-hits="0" data-linenumber="7">
             
             
 
             
 
-            <code class="ruby">    @director = Director.find(params[:id])</code>
+            <code class="ruby">    @movie = Movie.find(params[:id])</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="8">
+            
+            
+
+            
+
+            <code class="ruby">  end</code>
           </li>
         </div>
       
@@ -470,18 +589,18 @@
 
             
 
-            <code class="ruby">  end</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="10">
-            
-            
-
+          <li class="covered" data-hits="1" data-linenumber="10">
+            <span class="hits">1</span>
             
 
-            <code class="ruby"></code>
+            
+
+            <code class="ruby">  def new</code>
           </li>
         </div>
       
@@ -492,34 +611,12 @@
 
             
 
-            <code class="ruby">  def create</code>
+            <code class="ruby">    @director = Director.find(params[:director_id])</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="12">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">    Director.create(name: params[:name])</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="13">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">    redirect_to &#39;/directors&#39;</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="14">
+          <li class="never" data-hits="" data-linenumber="12">
             
             
 
@@ -530,7 +627,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="15">
+          <li class="never" data-hits="" data-linenumber="13">
             
             
 
@@ -541,13 +638,35 @@
         </div>
       
         <div>
+          <li class="covered" data-hits="1" data-linenumber="14">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">  def create</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="15">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    @director = Director.find(params[:director_id])</code>
+          </li>
+        </div>
+      
+        <div>
           <li class="covered" data-hits="1" data-linenumber="16">
             <span class="hits">1</span>
             
 
             
 
-            <code class="ruby">  private</code>
+            <code class="ruby">    movie = @director.movies.create(movie_params)</code>
           </li>
         </div>
       
@@ -558,23 +677,12 @@
 
             
 
-            <code class="ruby">  def director_params</code>
+            <code class="ruby">    redirect_to &quot;/directors/#{@director.id}/movies&quot;</code>
           </li>
         </div>
       
         <div>
-          <li class="missed" data-hits="0" data-linenumber="18">
-            
-            
-
-            
-
-            <code class="ruby">    params.permit(:name)</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="19">
+          <li class="never" data-hits="" data-linenumber="18">
             
             
 
@@ -585,7 +693,62 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="20">
+          <li class="never" data-hits="" data-linenumber="19">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="20">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">  private</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="21">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">  def movie_params</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="22">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    params.permit(:title, :oscar, :nominations)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="23">
+            
+            
+
+            
+
+            <code class="ruby">  end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="24">
             
             
 
@@ -811,6 +974,70 @@
       
         <div>
           <li class="never" data-hits="" data-linenumber="7">
+            
+            
+
+            
+
+            <code class="ruby">end</code>
+          </li>
+        </div>
+      
+    </ol>
+  </pre>
+</div>
+
+      
+        <div class="source_table" id="fa11121ba40751fa1a5e636647aa6a7b3fc275d3">
+  <div class="header">
+    <h3>app/models/movie.rb</h3>
+    <h4>
+      <span class="green">
+  100.0%
+</span>
+
+      lines covered
+    </h4>
+
+    
+
+    <div class="t-line-summary">
+      <b>2</b> relevant lines.
+      <span class="green"><b>2</b> lines covered</span> and
+      <span class="red"><b>0</b> lines missed.</span>
+    </div>
+
+    
+
+  </div>
+
+  <pre>
+    <ol>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="1">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">class Movie &lt; ApplicationRecord</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="2">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">  belongs_to :director </code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="3">
             
             
 
@@ -3277,8 +3504,8 @@
     
 
     <div class="t-line-summary">
-      <b>19</b> relevant lines.
-      <span class="green"><b>19</b> lines covered</span> and
+      <b>23</b> relevant lines.
+      <span class="green"><b>23</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
 
@@ -3433,13 +3660,13 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="14">
-            <span class="hits">1</span>
+          <li class="never" data-hits="" data-linenumber="14">
+            
             
 
             
 
-            <code class="ruby">  get &#39;/directors&#39;, to: &#39;directors#index&#39;</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
@@ -3450,7 +3677,7 @@
 
             
 
-            <code class="ruby">  get &#39;/directors/new&#39;, to: &#39;directors#new&#39;</code>
+            <code class="ruby">  get &#39;/directors&#39;, to: &#39;directors#index&#39;</code>
           </li>
         </div>
       
@@ -3461,7 +3688,7 @@
 
             
 
-            <code class="ruby">  get &#39;/directors/:id&#39;, to: &#39;directors#show&#39;</code>
+            <code class="ruby">  get &#39;/directors/new&#39;, to: &#39;directors#new&#39;</code>
           </li>
         </div>
       
@@ -3472,7 +3699,7 @@
 
             
 
-            <code class="ruby">  get &#39;/movies&#39;, to: &#39;movies#index&#39;</code>
+            <code class="ruby">  post &#39;/directors&#39;, to: &#39;directors#create&#39;</code>
           </li>
         </div>
       
@@ -3483,7 +3710,7 @@
 
             
 
-            <code class="ruby">  get &#39;/movies/:id&#39;, to: &#39;movies#show&#39;</code>
+            <code class="ruby">  get &#39;/directors/:id&#39;, to: &#39;directors#show&#39;</code>
           </li>
         </div>
       
@@ -3494,7 +3721,7 @@
 
             
 
-            <code class="ruby">  get &#39;/directors/:director_id/movies&#39;, to: &#39;director_movies#index&#39;</code>
+            <code class="ruby">  get &#39;/directors/:id/edit&#39;, to: &#39;directors#edit&#39;</code>
           </li>
         </div>
       
@@ -3505,12 +3732,67 @@
 
             
 
-            <code class="ruby">  post &#39;/directors&#39;, to: &#39;directors#create&#39;</code>
+            <code class="ruby">  patch &#39;/directors/:id&#39;, to: &#39;directors#update&#39;</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="21">
+          <li class="covered" data-hits="1" data-linenumber="21">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">  get &#39;/directors/:director_id/movies&#39;, to: &#39;director_movies#index&#39;</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="22">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">  get &#39;/movies&#39;, to: &#39;movies#index&#39;</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="23">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">  get &#39;/directors/:director_id/movies/new&#39;, to: &#39;movies#new&#39;</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="24">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">  post &#39;/directors/:director_id/movies&#39;, to: &#39;movies#create&#39;</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="25">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">  get &#39;/movies/:id&#39;, to: &#39;movies#show&#39;</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="26">
             
             
 
