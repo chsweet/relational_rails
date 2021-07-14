@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe 'vegetable garden show page', type: :feature do
+RSpec.describe 'garden show page', type: :feature do
   before :each do
     @garden_1 = Garden.create!(name: 'Sweet Garden', weeded: true, hrs_of_sun: 15)
     @garden_2 = Garden.create!(name: 'Shears Garden', weeded: true, hrs_of_sun: 10)

@@ -13,7 +13,7 @@ class VegetablesController < ApplicationController
 
   def create
     garden = Garden.find(params[:id])
-    vegetable = garden.vegetables.create(vegetable_params)
+    garden.vegetables.create(vegetable_params)
     redirect_to "/gardens/#{garden.id}/vegetables"
   end
 

@@ -5,6 +5,8 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+Garden.destroy_all
+Vegetable.destroy_all
 
 @garden_1 = Garden.create!(name: 'Sweet Garden', weeded: true, hrs_of_sun: 15)
 @garden_2 = Garden.create!(name: 'Shears Garden', weeded: true, hrs_of_sun: 10)

@@ -9,7 +9,7 @@ Rails.application.routes.draw do
 
   get '/gardens/:id', to: 'gardens#show'
   get '/gardens/:id/vegetables', to: 'gardens#vegetables_index'
-
+  
   get '/gardens/:id/edit', to: 'gardens#edit'
   patch '/gardens/:id', to: 'gardens#update'
 
