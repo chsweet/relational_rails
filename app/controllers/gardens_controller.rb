@@ -11,8 +11,8 @@ class GardensController < ApplicationController
     @garden = Garden.find(params[:id])
     if params[:sort] == 'alphabatize'
       @vegetables = @garden.vegetables.alphabatize
-    elsif params[:filter] == 'number'
-      @vegetables = @garden.vegetables.order(:min_hrs_sun)
+    elsif params[:number]
+      @vegetables = @garden.vegetables.where("min_hrs_sun > ?",  params[:number])
     else
       @vegetables = @garden.vegetables
     end

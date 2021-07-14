@@ -2,9 +2,9 @@
 <br>
 <%= link_to "Sort Vegetables", "/gardens/#{@garden.id}/vegetables?sort=alphabatize" %>
 <br>
-<%= form_with url: "/gardens/#{@garden.id}/vegetables?filter=number", method: :get, local: true do |form| %>
+<%= form_with url: "/gardens/#{@garden.id}/vegetables?filter=#{@number}", method: :get, local: true do |form| %>
     <%= form.label :number, "Hours of Sunlight" %>
-    <%= form.text_field :number %>
+    <%= @number = form.text_field :number  %>
 
     <%= form.submit "Filter by hours of sun" %>
 <% end %>

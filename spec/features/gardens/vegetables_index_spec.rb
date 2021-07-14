@@ -65,7 +65,7 @@ RSpec.describe 'garden vegetables index' do
   end
 
   #User story 21
-  xit 'has form to return vegetables with more sunlight needed than number input' do
+  it 'has form to return vegetables with more sunlight needed than number input' do
     visit "/gardens/#{@garden_1.id}/vegetables"
 
     fill_in("Hours of Sunlight", with: 9)
