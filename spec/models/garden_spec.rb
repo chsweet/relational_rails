@@ -11,11 +11,12 @@ describe Garden do
       @tomato_1 = @garden_1.vegetables.create!(name: 'Cherokee Purple', perennial: true, min_hrs_sun: 8)
       @onion_1 = @garden_1.vegetables.create!(name: 'Sweet Yellow Onion', perennial: true, min_hrs_sun: 14)
     end
-
+    
+    #User story 7
     describe '#vegetable_count' do
       it 'returns the vegetable count for the garden' do
         expect(@garden_1.vegetable_count).to eq(2)
       end
-    end 
+    end
   end
 end
