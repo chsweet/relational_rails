@@ -4,9 +4,12 @@ class Vegetable < ApplicationRecord
   def self.perennial_vegetable
     where(perennial: true)
   end
-
-#add downcase?? 
-  def self.sort_alphabetical
+#add downcase??
+  def self.alphabatize
     order(:name)
   end
+
+  def self.something
+  end
+
 end

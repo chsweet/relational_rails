@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe 'vegetable garden vegetables index' do
+RSpec.describe 'garden vegetables index' do
   before :each do
     @garden_1 = Garden.create!(name: 'Sweet Garden', weeded: true, hrs_of_sun: 15)
 
@@ -50,10 +50,22 @@ RSpec.describe 'vegetable garden vegetables index' do
   it 'has link to sort vegetables alphabeticaly' do
     visit "/gardens/#{@garden_1.id}/vegetables"
 
-    click_on("Sort Vegetables")
+    click_link("Sort Vegetables")
 
     expect(current_path).to eq("/gardens/#{@garden_1.id}/vegetables")
     expect(@tomato_1.name).to appear_before(@potato_1.name, only_text: true)
     expect(@potato_1.name).to_not appear_before(@onion_1.name, only_text: true)
+  end
+
+  it 'has form to return vegetables with more sunlight needed than number input' do
+    visit "/gardens/#{@garden_1.id}/vegetables"
+
+    fill_in("Hours of Sunlight", with: 9)
+    click_on('Filter by hours of sun')
+save_and_open_page
+    expect(current_path).to eq("/gardens/#{@garden_1.id}/vegetables")
+    expect(page).to have_content(@potato_1.name)
+    expect(page).to_not have_content(@tomato_1.name)
+    expect(page).to have_content(@onion_1.name)
   end
 end

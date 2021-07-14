@@ -19,10 +19,12 @@ describe Vegetable do
       end
     end
 
-    describe '#sort_vegetables' do
+    describe '#alphabatize' do
       it 'sorts vegetables alphabeticaly' do
-        expect(Vegetable.sort_alphabetical).to eq([@tomato_1, @onion_1, @potato_1])
+        expect(Vegetable.alphabatize).to eq([@tomato_1, @onion_1, @potato_1])
       end
     end
+
+    describe '#'
   end
 end
