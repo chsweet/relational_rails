@@ -26,6 +26,12 @@ class DirectorsController < ApplicationController
     redirect_to "/directors/#{director.id}"
   end
 
+  def destroy
+    director = Director.find(params[:id])
+    director.destroy
+    redirect_to '/directors'
+  end
+
   private
   def director_params
     params.permit(:name, :oscar, :nominations)

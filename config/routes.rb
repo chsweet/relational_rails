@@ -31,11 +31,20 @@ Rails.application.routes.draw do
   get '/directors/new', to: 'directors#new'
   post '/directors', to: 'directors#create'
   get '/directors/:id', to: 'directors#show'
+
+
   get '/directors/:id/edit', to: 'directors#edit'
   patch '/directors/:id', to: 'directors#update'
+
   get '/directors/:director_id/movies', to: 'director_movies#index'
   get '/movies', to: 'movies#index'
+
   get '/directors/:director_id/movies/new', to: 'movies#new'
   post '/directors/:director_id/movies', to: 'movies#create'
+  delete '/directors/:id', to: 'directors#destroy'
+
   get '/movies/:id', to: 'movies#show'
+  get '/movies/:id/edit', to: 'movies#edit'
+  patch '/movies/:id', to: 'movies#update'
+  delete '/movies/:id', to: 'movies#destroy'
 end

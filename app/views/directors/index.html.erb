@@ -3,4 +3,8 @@
   <% @directors.each do |director| %>
     <h3>Name: <%= director.name %></h3>
     <p>Created at: <%= director.created_at %></p>
+    <%= link_to "Edit #{director.name}" , "/directors/#{director.id}/edit" %>
+    <br>
+    <br>
+    <%= link_to "Delete #{director.name}", "/directors/#{director.id}", method: :delete %>
 <% end %>

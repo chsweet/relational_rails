@@ -44,5 +44,45 @@ RSpec.describe "directors index page", type: :feature do
 
       expect(current_path).to eq('/directors')
     end
+
+    #User Story 17
+    it 'each director has their own edit link' do
+      director_1 = Director.create!(name: "Quentin Tarantino", created_at: "23-01-1993")
+      director_2 = Director.create!(name: "Alfred Hitchcock", created_at: "14-09-2009" )
+      director_3 = Director.create!(name: "Woody Allen", created_at: "16-04-2008")
+
+      visit '/directors'
+
+      expect(page).to have_content('Edit Quentin Tarantino')
+      expect(page).to have_content('Edit Alfred Hitchcock')
+      expect(page).to have_content('Edit Woody Allen')
+
+      click_on 'Edit Quentin Tarantino'
+
+      expect(current_path).to eq("/directors/#{director_1.id}/edit")
+
+      fill_in 'Nominations', with: 25
+      click_on 'Update Director'
+
+      expect(current_path).to eq("/directors/#{director_1.id}")
+      expect(page).to have_content('Total Nominations: 25')
+    end
+
+    #User story 22
+    it 'each director has a link to delete itself' do
+      director_1 = Director.create!(name: "Quentin Tarantino", created_at: "23-01-1993")
+      director_2 = Director.create!(name: "Alfred Hitchcock", created_at: "14-09-2009" )
+      director_3 = Director.create!(name: "Woody Allen", created_at: "16-04-2008")
+
+      visit '/directors'
+      expect(page).to have_content('Delete Quentin Tarantino')
+      expect(page).to have_content('Delete Alfred Hitchcock')
+      expect(page).to have_content('Delete Woody Allen')
+
+      click_link 'Delete Alfred Hitchcock'
+      expect(current_path).to eq('/directors')
+
+      expect(page).to_not have_content('Alfred Hitchcock')
+    end
   end
 end

@@ -5,3 +5,5 @@
 <p>Total Movies: <%= @director.movie_count %></p>
 
 <%= link_to "Edit #{@director.name}", "/directors/#{@director.id}/edit" %>
+<br>
+<%= link_to "Delete #{@director.name}", "/directors/#{@director.id}", method: :delete %>
