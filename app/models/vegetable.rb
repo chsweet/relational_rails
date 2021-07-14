@@ -9,7 +9,7 @@ class Vegetable < ApplicationRecord
     order(:name)
   end
 
-  def self.something
-  end
+  # def self.something
+  # end
 
 end

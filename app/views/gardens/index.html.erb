@@ -1,8 +1,8 @@
 <h1>Gardens</h1>
-
+<br>
+<%= link_to "New Garden", '/gardens/new'%>
+<br>
 <% @gardens.each do |garden| %>
-  <h3><%= garden.name %> planted on: <%= garden.created_at%></h3> <%= link_to "Edit #{garden.name}", "/gardens/#{garden.id}/edit" %>
+  <h3><%= garden.name %> planted on: <%= garden.created_at.strftime("%Y-%m-%d")%></h3> <%= link_to "Edit #{garden.name}", "/gardens/#{garden.id}/edit" %> <%= link_to "Delete #{garden.name}", "/gardens/#{garden.id}",  method: :delete   %>
 <% end %>
 <br>
-<br>
-<%= link_to "New Garden", '/gardens/new' %>
