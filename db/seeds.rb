@@ -8,12 +8,12 @@
 Garden.destroy_all
 Vegetable.destroy_all
 
-@garden_1 = Garden.create!(name: 'Sweet Garden', weeded: true, hrs_of_sun: 15)
-@garden_2 = Garden.create!(name: 'Shears Garden', weeded: true, hrs_of_sun: 10)
-@garden_3 = Garden.create!(name: 'Maupin Garden', weeded: true, hrs_of_sun: 15)
-@garden_4 = Garden.create!(name: 'Turing Garden', weeded: false, hrs_of_sun: 8)
-@garden_5 = Garden.create!(name: '32nd Street Garden', weeded: true, hrs_of_sun: 12)
-@garden_6 = Garden.create!(name: 'Perrine Street Garden', weeded: false, hrs_of_sun: 10)
+@garden_1 = Garden.create!(created_at: '15-05-2021', name: 'Sweet Garden', weeded: true, hrs_of_sun: 15)
+@garden_2 = Garden.create!(created_at: '03-05-2021', name: 'Shears Garden', weeded: true, hrs_of_sun: 10)
+@garden_3 = Garden.create!(created_at: '13-05-2021', name: 'Maupin Garden', weeded: true, hrs_of_sun: 15)
+@garden_4 = Garden.create!(created_at: '08-05-2021', name: 'Turing Garden', weeded: false, hrs_of_sun: 8)
+@garden_5 = Garden.create!(created_at: '01-05-2021', name: '32nd Street Garden', weeded: true, hrs_of_sun: 12)
+@garden_6 = Garden.create!(created_at: '23-05-2021', name: 'Perrine Street Garden', weeded: false, hrs_of_sun: 10)
 
 @tomato_1 = @garden_1.vegetables.create!(name: 'Cherokee Purple', perennial: false, min_hrs_sun: 8)
 @onion_1 = @garden_1.vegetables.create!(name: 'Sweet Yellow Onion', perennial: false, min_hrs_sun: 14)
