@@ -9,7 +9,13 @@ class GardensController < ApplicationController
 
   def vegetables_index
     @garden = Garden.find(params[:id])
-    @vegetables = @garden.vegetables
+    if params[:sort] == 'alphabatize'
+      @vegetables = @garden.vegetables.alphabatize
+    elsif params[:number]
+      @vegetables = @garden.vegetables.where("min_hrs_sun > ?",  params[:number])
+    else
+      @vegetables = @garden.vegetables
+    end
   end
 
   def new

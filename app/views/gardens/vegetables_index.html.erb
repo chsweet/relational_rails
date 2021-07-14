@@ -1,3 +1,14 @@
+<%= link_to "Add Vegetable", "/gardens/#{@garden.id}/vegetables/new" %>
+<br>
+<%= link_to "Sort Vegetables", "/gardens/#{@garden.id}/vegetables?sort=alphabatize" %>
+<br>
+<%= form_with url: "/gardens/#{@garden.id}/vegetables?filter=#{@number}", method: :get, local: true do |form| %>
+    <%= form.label :number, "Hours of Sunlight" %>
+    <%= @number = form.text_field :number  %>
+
+    <%= form.submit "Filter by hours of sun" %>
+<% end %>
+
 <h1><%= @garden.name %></h1>
 <% @vegetables.each do |vegetable| %>
 <h3>Vegetable: <%= vegetable.name %></h3>
@@ -5,6 +16,4 @@
 <p>Minimum of Sunlight: <%= vegetable.min_hrs_sun %></p>
 <%= link_to "Edit #{vegetable.name}", "/vegetables/#{vegetable.id}/edit" %>
 <% end %>
-<br>
-<%= link_to "Add Vegetable", "/gardens/#{@garden.id}/vegetables/new" %>
 <br>

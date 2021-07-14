@@ -2,6 +2,10 @@ class Vegetable < ApplicationRecord
   belongs_to :garden
 
   def self.perennial_vegetable
-    self.where(perennial: true)
+    where(perennial: true)
+  end
+#add downcase??
+  def self.alphabatize
+    order(:name)
   end
 end
