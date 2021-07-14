@@ -1,7 +1,7 @@
 # User story 19
 require 'rails_helper'
 
-RSpec.describe 'garden show page', type: :feature do
+RSpec.describe 'destroy garden', type: :feature do
   before :each do
     Garden.destroy_all
     Vegetable.destroy_all
