@@ -8,8 +8,4 @@ class Vegetable < ApplicationRecord
   def self.alphabatize
     order(:name)
   end
-
-  # def self.something
-  # end
-
 end
