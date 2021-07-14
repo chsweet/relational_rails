@@ -1,5 +1,9 @@
 <%= form_with url: "/directors/#{@director.id}", method: :patch, local: true do |form| %>
   <%= form.label :name %>
   <%= form.text_field :name %>
+  <%= form.label :oscar %>
+  <%= form.check_box :oscar %>
+  <%= form.label :nominations %>
+  <%= form.number_field :nominations %>
   <%= form.submit "Update Director" %>
 <% end %>

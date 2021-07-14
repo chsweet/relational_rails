@@ -60,8 +60,6 @@ RSpec.describe "directors show page", type: :feature do
 
       fill_in 'Name', with: 'David Lynch'
       click_button 'Update Director'
-      
-      save_and_open_page
 
       expect(current_path).to eq("/directors/#{director.id}")
       expect(page).to have_content('David Lynch')

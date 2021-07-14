@@ -3,3 +3,12 @@
   <h3><%= movie.title %></h3>
   <%= link_to "Edit #{movie.title}", "/movies/#{movie.id}/edit" %>
 <% end %>
+<br>
+<%= link_to 'Alphabetize Titles', "/directors/#{@director.id}/movies?sort=Alphabetize" %>
+<br>
+<br>
+<%= form_with url: "/directors/#{@director.id}/movies?sort=#{@count}", method: :get, local: true do |form| %>
+  <%= form.label :nomination_count, "Nomination Count" %>
+  <%= @count = form.number_field :nomination_count %>
+  <%= form.submit "Filter By Nominations" %>
+<% end %>
