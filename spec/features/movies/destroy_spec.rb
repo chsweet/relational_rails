@@ -4,12 +4,10 @@ RSpec.describe 'destroy' do
 
   #User story 20
   it 'deletes that movie and its attributes' do
-    tarantino = Director.create!(name: "Quentin Tarantino", oscar: true, nominations: 17)
-    pulp_fiction = tarantino.movies.create!(title: "Pulp Fiction",
-                                            oscar: true,
-                                            nominations: 7)
+    director = Director.create!(name: "Quentin Tarantino", oscar: true, nominations: 17)
+    movie = director.movies.create!(title: "Pulp Fiction", oscar: true, nominations: 7)
 
-    visit "/movies/#{pulp_fiction.id}"
+    visit "/movies/#{movie.id}"
     click_link 'Delete Pulp Fiction'
 
     expect(current_path).to eq('/movies')
