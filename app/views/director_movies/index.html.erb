@@ -1,6 +1,8 @@
 <%= link_to 'New Movie', "/directors/#{@director.id}/movies/new" %>
 <% @movies.each do |movie| %>
   <h3><%= movie.title %></h3>
+  <p>Has Oscar: <%= movie.oscar %></p>
+  <p>Nominations: <%= movie.nominations %></p>
   <%= link_to "Edit #{movie.title}", "/movies/#{movie.id}/edit" %>
 <% end %>
 <br>
