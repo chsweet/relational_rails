@@ -1,7 +1,7 @@
 # User story 14
 require 'rails_helper'
 
-RSpec.describe 'the vegetable edit' do
+RSpec.describe 'vegetable edit' do
   before :each do
     Garden.destroy_all
     Vegetable.destroy_all
